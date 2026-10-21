@@ -4,7 +4,7 @@ Landing page resmi untuk **Sahabat Tuli**, aplikasi mobile penghubung percakapan
 
 ---
 
-## 🚀 Teknologi yang Digunakan
+## Teknologi yang Digunakan
 
 - **Framework**: [Next.js](https://nextjs.org/) (App Router, Turbopack)
 - **Library UI**: [React](https://react.dev/)
@@ -15,7 +15,7 @@ Landing page resmi untuk **Sahabat Tuli**, aplikasi mobile penghubung percakapan
 
 ---
 
-## 📂 Struktur Direktori
+## Struktur Direktori
 
 ```text
 ├── app/
@@ -32,38 +32,8 @@ Landing page resmi untuk **Sahabat Tuli**, aplikasi mobile penghubung percakapan
 
 ---
 
-## 💻 Menjalankan Proyek Secara Lokal
 
-1. **Clone repository ini**:
-   ```bash
-   git clone https://github.com/JovanSiallagan/SahabatTuli-WEB.git
-   cd SahabatTuli-WEB
-   ```
-
-2. **Install dependensi**:
-   ```bash
-   npm install
-   ```
-
-3. **Jalankan development server**:
-   ```bash
-   npm run dev
-   ```
-
-4. Buka [http://localhost:3000](http://localhost:3000) di browser Anda.
-
----
-
-## 📦 Membangun untuk Produksi
-
-```bash
-npm run build
-npm run start
-```
-
----
-
-## 📱 Kontak & Dukungan
+## Kontak & Dukungan
 
 - **Email**: [kontak@sahabattuli.id](mailto:kontak@sahabattuli.id)
 - **Instagram**: [@sahabattuli.id](https://www.instagram.com/sahabattuli.id/)

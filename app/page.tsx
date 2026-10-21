@@ -1,14 +1,34 @@
+"use client";
+
 import Image from "next/image";
 import Reveal from "@/components/Reveal";
 
 export default function Home() {
+  const scrollTo = (id: string) => (e: React.MouseEvent) => {
+    e.preventDefault();
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  const scrollToTop = (e: React.MouseEvent) => {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <>
       {/* Navigasi */}
       <header className="border-b border-slate-800 bg-[#001F3F] sticky top-0 z-50 shadow-md">
         <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
           {/* Logo Sahabat Tuli */}
-          <a href="#" className="flex items-center" aria-label="Sahabat Tuli">
+          <a
+            href="/"
+            onClick={scrollToTop}
+            className="flex items-center cursor-pointer"
+            aria-label="Sahabat Tuli"
+          >
             <Image
               src="/sahabattuli%20LOGO%20transparent.png"
               alt="Logo Sahabat Tuli"
@@ -21,31 +41,52 @@ export default function Home() {
 
           {/* Menu Link */}
           <nav className="hidden md:flex items-center gap-8 font-medium text-sm text-slate-300">
-            <a href="#fitur" className="hover:text-white transition-colors">
+            <button
+              type="button"
+              onClick={scrollTo("fitur")}
+              className="hover:text-white transition-colors cursor-pointer"
+            >
               Fitur
-            </a>
-            <a href="#cara-kerja" className="hover:text-white transition-colors">
+            </button>
+            <button
+              type="button"
+              onClick={scrollTo("cara-kerja")}
+              className="hover:text-white transition-colors cursor-pointer"
+            >
               Cara Kerja
-            </a>
-            <a href="#download" className="hover:text-white transition-colors">
+            </button>
+            <button
+              type="button"
+              onClick={scrollTo("download")}
+              className="hover:text-white transition-colors cursor-pointer"
+            >
               Unduh Aplikasi
-            </a>
-            <a href="#donasi" className="hover:text-white transition-colors">
+            </button>
+            <button
+              type="button"
+              onClick={scrollTo("donasi")}
+              className="hover:text-white transition-colors cursor-pointer"
+            >
               Dukungan & Donasi
-            </a>
-            <a href="#kontak" className="hover:text-white transition-colors">
+            </button>
+            <button
+              type="button"
+              onClick={scrollTo("kontak")}
+              className="hover:text-white transition-colors cursor-pointer"
+            >
               Kontak
-            </a>
+            </button>
           </nav>
 
           {/* Tombol Aksi: Unduh Aplikasi */}
           <div>
-            <a
-              href="#download"
-              className="inline-flex items-center justify-center px-4 py-2.5 text-sm font-semibold rounded-lg bg-brand-blue hover:bg-brand-blueDark text-white transition-colors shadow-sm"
+            <button
+              type="button"
+              onClick={scrollTo("download")}
+              className="inline-flex items-center justify-center px-4 py-2.5 text-sm font-semibold rounded-lg bg-brand-blue hover:bg-brand-blueDark text-white transition-colors shadow-sm cursor-pointer"
             >
               Unduh APK Android
-            </a>
+            </button>
           </div>
         </div>
       </header>
@@ -72,19 +113,21 @@ export default function Home() {
                 {/* CTA Buttons */}
                 <Reveal direction="up" delay={200}>
                   <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
-                    <a
-                      href="#download"
-                      className="inline-flex items-center justify-center gap-2 bg-brand-navy text-white px-6 py-3.5 rounded-lg text-sm font-semibold hover:bg-brand-blue transition-colors shadow-sm"
+                    <button
+                      type="button"
+                      onClick={scrollTo("download")}
+                      className="inline-flex items-center justify-center gap-2 bg-brand-navy text-white px-6 py-3.5 rounded-lg text-sm font-semibold hover:bg-brand-blue transition-colors shadow-sm cursor-pointer"
                     >
                       <span>Unduh Aplikasi Android</span>
                       <span>↓</span>
-                    </a>
-                    <a
-                      href="#donasi"
-                      className="inline-flex items-center justify-center gap-2 bg-white border border-slate-300 text-slate-700 px-6 py-3.5 rounded-lg text-sm font-semibold hover:bg-slate-50 transition-colors"
+                    </button>
+                    <button
+                      type="button"
+                      onClick={scrollTo("donasi")}
+                      className="inline-flex items-center justify-center gap-2 bg-white border border-slate-300 text-slate-700 px-6 py-3.5 rounded-lg text-sm font-semibold hover:bg-slate-50 transition-colors cursor-pointer"
                     >
                       Salurkan Donasi
-                    </a>
+                    </button>
                   </div>
                 </Reveal>
 
@@ -286,8 +329,9 @@ export default function Home() {
 
                     <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 pt-1">
                       <a
-                        href="#"
-                        className="inline-flex items-center gap-2.5 bg-brand-navy hover:bg-brand-blue text-white px-6 py-3.5 rounded-lg text-sm font-semibold transition-colors"
+                        href="/sahabattuli.apk"
+                        download
+                        className="inline-flex items-center gap-2.5 bg-brand-navy hover:bg-brand-blue text-white px-6 py-3.5 rounded-lg text-sm font-semibold transition-colors cursor-pointer"
                       >
                         <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
                           <path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM17 13l-5 5-5-5h3V9h4v4h3z" />
@@ -371,12 +415,13 @@ export default function Home() {
                   </div>
 
                   <div className="pt-1">
-                    <a
-                      href="#kontak"
-                      className="w-full inline-flex items-center justify-center py-2.5 rounded-lg bg-brand-navy hover:bg-brand-blue text-white text-xs font-semibold transition-colors"
+                    <button
+                      type="button"
+                      onClick={scrollTo("kontak")}
+                      className="w-full inline-flex items-center justify-center py-2.5 rounded-lg bg-brand-navy hover:bg-brand-blue text-white text-xs font-semibold transition-colors cursor-pointer"
                     >
                       Konfirmasi Donasi / Hubungi Tim
-                    </a>
+                    </button>
                   </div>
                 </Reveal>
               </div>
@@ -410,24 +455,40 @@ export default function Home() {
               </h5>
               <ul className="space-y-2 text-sm text-slate-300">
                 <li>
-                  <a href="#fitur" className="hover:text-white transition-colors">
+                  <button
+                    type="button"
+                    onClick={scrollTo("fitur")}
+                    className="hover:text-white transition-colors cursor-pointer text-left"
+                  >
                     Fitur Aplikasi
-                  </a>
+                  </button>
                 </li>
                 <li>
-                  <a href="#cara-kerja" className="hover:text-white transition-colors">
+                  <button
+                    type="button"
+                    onClick={scrollTo("cara-kerja")}
+                    className="hover:text-white transition-colors cursor-pointer text-left"
+                  >
                     Cara Kerja
-                  </a>
+                  </button>
                 </li>
                 <li>
-                  <a href="#download" className="hover:text-white transition-colors">
+                  <button
+                    type="button"
+                    onClick={scrollTo("download")}
+                    className="hover:text-white transition-colors cursor-pointer text-left"
+                  >
                     Unduh APK Android
-                  </a>
+                  </button>
                 </li>
                 <li>
-                  <a href="#donasi" className="hover:text-white transition-colors">
+                  <button
+                    type="button"
+                    onClick={scrollTo("donasi")}
+                    className="hover:text-white transition-colors cursor-pointer text-left"
+                  >
                     Dukungan & Donasi
-                  </a>
+                  </button>
                 </li>
               </ul>
             </div>

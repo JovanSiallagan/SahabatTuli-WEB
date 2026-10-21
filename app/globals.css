@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap');
 @import "tailwindcss";
 
 @theme {
@@ -12,11 +13,11 @@
   --color-brand-surface: #f8fafc;
   --color-brand-border: #e2e8f0;
 
-  --font-heading: var(--font-heading), "Plus Jakarta Sans", sans-serif;
-  --font-sans: var(--font-sans), "Inter", sans-serif;
+  --font-heading: "Plus Jakarta Sans", sans-serif;
+  --font-sans: "Inter", sans-serif;
 }
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 5rem; /* 80px sesuai tinggi navbar h-20 agar padding ungu tetap terlihat */
+  scroll-padding-top: 5rem;
 }

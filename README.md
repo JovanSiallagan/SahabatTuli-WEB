@@ -1,36 +1,70 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Sahabat Tuli — Website Resmi
 
-## Getting Started
+Landing page resmi untuk **Sahabat Tuli**, aplikasi mobile penghubung percakapan langsung antara Teman Tuli dan Teman Dengar melalui teknologi konversi Suara ke Teks (*Voice to Text*) dan Teks ke Suara (*Text to Voice*) secara real-time.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## 🚀 Teknologi yang Digunakan
+
+- **Framework**: [Next.js](https://nextjs.org/) (App Router, Turbopack)
+- **Library UI**: [React](https://react.dev/)
+- **Bahasa**: [TypeScript](https://www.typescriptlang.org/)
+- **Styling**: [Tailwind CSS v4](https://tailwindcss.com/)
+- **Tipografi**: [Google Fonts](https://fonts.google.com/) (*Plus Jakarta Sans* & *Inter* via `next/font/google`)
+- **Animasi**: Native Scroll Reveal dengan `IntersectionObserver` & Tailwind CSS Transitions
+
+---
+
+## 📂 Struktur Direktori
+
+```text
+├── app/
+│   ├── globals.css      # Konfigurasi Tailwind CSS v4, tema brand, scroll behavior
+│   ├── icon.png         # Favicon aplikasi (format PNG)
+│   ├── layout.tsx       # Root layout, konfigurasi Google Font, SEO metadata
+│   └── page.tsx         # Komponen halaman landing page utama
+├── components/
+│   └── Reveal.tsx       # Komponen animasi transisi saat elemen di-scroll
+├── public/              # Aset gambar, mockup ponsel, dan logo transparan
+├── package.json
+└── tsconfig.json
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 💻 Menjalankan Proyek Secara Lokal
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. **Clone repository ini**:
+   ```bash
+   git clone https://github.com/JovanSiallagan/SahabatTuli-WEB.git
+   cd SahabatTuli-WEB
+   ```
 
-## Learn More
+2. **Install dependensi**:
+   ```bash
+   npm install
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+3. **Jalankan development server**:
+   ```bash
+   npm run dev
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+4. Buka [http://localhost:3000](http://localhost:3000) di browser Anda.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 📦 Membangun untuk Produksi
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+npm run build
+npm run start
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## 📱 Kontak & Dukungan
+
+- **Email**: [kontak@sahabattuli.id](mailto:kontak@sahabattuli.id)
+- **Instagram**: [@sahabattuli.id](https://www.instagram.com/sahabattuli.id/)
+- **Hak Cipta**: © 2026 Sahabat Tuli. Seluruh hak cipta dilindungi.

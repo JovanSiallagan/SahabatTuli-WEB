@@ -7,7 +7,7 @@ export default function Home() {
       {/* Navigasi */}
       <header className="border-b border-slate-800 bg-[#001F3F] sticky top-0 z-50 shadow-md">
         <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-          {/* Logo Sahabat Tuli Resmi */}
+          {/* Logo Sahabat Tuli */}
           <a href="#" className="flex items-center" aria-label="Sahabat Tuli">
             <Image
               src="/sahabattuli%20LOGO%20transparent.png"

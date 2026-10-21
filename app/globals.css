@@ -1,26 +1,22 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-brand-navy: #051833;
+  --color-brand-navyDeep: #020e1e;
+  --color-brand-navy-deep: #020e1e;
+  --color-brand-blue: #1980e6;
+  --color-brand-blueDark: #0e67be;
+  --color-brand-blue-dark: #0e67be;
+  --color-brand-lightBlue: #edf5ff;
+  --color-brand-light-blue: #edf5ff;
+  --color-brand-surface: #f8fafc;
+  --color-brand-border: #e2e8f0;
+
+  --font-heading: var(--font-heading), "Plus Jakarta Sans", sans-serif;
+  --font-sans: var(--font-sans), "Inter", sans-serif;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem; /* 80px sesuai tinggi navbar h-20 agar padding ungu tetap terlihat */
 }
